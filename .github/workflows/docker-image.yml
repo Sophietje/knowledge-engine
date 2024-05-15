@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version for new release'
+        required: true
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Docker image for Admin UI
+      run: docker buildx build ./admin-ui --platform linux/arm64,linux/amd64 --tag ghcr.io/Sophietje/knowledge-engine/${{ github.event.inputs.version }} --push
+      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
