@@ -22,7 +22,7 @@ jobs:
     - name: Build and push Docker image for Admin UI
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./admin-ui
         platforms: linux/amd64,linux/arm64
         push: true
         tags: ${{ github.event.inputs.version }}
