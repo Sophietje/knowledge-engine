@@ -14,9 +14,12 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: maven:3.8.7-eclipse-temurin-17-alpine
-
     steps:
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
     - uses: actions/checkout@v4
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
