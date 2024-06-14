@@ -5,7 +5,7 @@
 Distributed mode
 ================
 
-This section contains information about running the knowledge engine in distributed mode. This mode requires a central component called the knowledge directory (KD). The only responsibility of the KD is keeping track of all registered Knowledge Engine runtimes (KE runtime). The different KE runtimes use the KD to find other KE runtimes with whom they can exchange data. Note that KE runtimes communicate with each other directly and the knowledge directory does not mediate in this process.  
+This section contains information about running the knowledge engine in distributed mode. This mode requires a central component called the Knowledge Directory (KD). The only responsibility of the KD is keeping track of all registered Knowledge Engine runtimes (KE runtime). The different KE runtimes use the KD to find other KE runtimes with whom they can exchange data. Note that KE runtimes communicate with each other directly and the knowledge directory does not mediate in this process.  
 
 Figure 1 below illustrates an example of a distributed knowledge network consisting of multiple KE runtimes and a single KD. The KE runtimes register to the KD and regularly query it to discover updates to the KE runtimes. The KE runtimes communicate peer-2-peer with each other to discover new Smart Connectors (SCs) and to exchange actual data (requests) using the Inter-KER protocol.
 
