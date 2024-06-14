@@ -25,7 +25,7 @@ java -Dorg.slf4j.simpleLogger.logFile=kd.log -cp "knowledge-directory-1.2.4.jar:
 
 The `nohup` command can be used to run the process in the background. On overview of the registered Knowledge Engine runtimes can be found on `http://localhost:8080/ker/` (or another host or port if you desire).
 
-Once the knowledge directory is up and running, the REST server can be started. It is configured through environment variables. It has the following configuration options:
+Once the Knowledge Directory is up and running, the REST server can be started. It is configured through environment variables. It has the following configuration options:
 
 | Key    | Descrption                                     |
 |--------|------------------------------------------------|
