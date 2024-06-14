@@ -2,7 +2,7 @@ name: Deploy documentation website
 on:
   push:
     branches:
-      - test-ga
+      - master
     paths:
       - docs
 
