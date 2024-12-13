@@ -13,9 +13,11 @@ env:
   MAVEN_CLI_OPTS: --batch-mode --errors --fail-at-end --show-version
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
-    container: maven:3.9.9-eclipse-temurin-17-focal
+    container:
+      image: maven:3.9.9-eclipse-temurin-17-focal
+      options: --user 1001
 
     steps:
     - uses: actions/checkout@v4
