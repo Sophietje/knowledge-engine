@@ -15,10 +15,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: maven:3.8.7-eclipse-temurin-17-alpine
+    container: maven:3.9.9-eclipse-temurin-17-focal
 
     steps:
-    - run: apt install -y git
     - uses: actions/checkout@v4
     - name: Build JARs
       run: mvn $MAVEN_CLI_OPTS package
