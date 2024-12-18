@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'release' && github.event.prerelease == false)
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'release' && github.event.prerelease == false)
 
     steps:
     - name: Checkout repository
