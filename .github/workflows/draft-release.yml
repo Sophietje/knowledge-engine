@@ -33,7 +33,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          ${{ github.workspace }}/smart-connextor-rest-dist/target/smart-connector-rest-dist-${{ inputs.version }}-with-dependencies.jar
+          ${{ github.workspace }}/smart-connector-rest-dist/target/smart-connector-rest-dist-${{ inputs.version }}-with-dependencies.jar
           ${{ github.workspace }}/knowledge-directory/target/knowledge-directory-${{ inputs.version }}-with-dependencies.jar
         tag_name: ${{ inputs.version }}
         draft: true
